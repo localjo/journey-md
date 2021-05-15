@@ -1,0 +1,13 @@
+{
+  "name": "journey-md",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "journey-convert": "index.js"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5",
+    "moment": "^2.29.1"
+  }
+}
