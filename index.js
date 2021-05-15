@@ -34,6 +34,7 @@ const convertJSONtoMarkdown = () => {
                     : _.pick(obj, [
                         'timezone',
                         'mood',
+                        'sentiment',
                         'lat',
                         'lon',
                         'address',
@@ -54,8 +55,7 @@ const convertJSONtoMarkdown = () => {
                     }
                     return `${key}: ${_.isArray(obj[key]) ? obj[key].join(', ') : JSON.stringify(obj[key])}`
                 }).join('\n');
-                let md = `
----
+                let md = `---
 date: ${date.format('YYYY-MM-DD HH:MM:SS')}
 ${frontMatter}
 ---
